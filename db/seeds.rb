@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts 'Cleaning database...'
+Movie.destroy_all
+puts 'Creating movies...'
+30.times do
+  Movie.create!(title: Faker::Movie.title, overview: Faker::Quote.yoda, poster_url: 'https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg', rating: rand(0.0..10.0).round(1))
+end
+puts 'Finished!'
