@@ -15,3 +15,13 @@ puts 'Creating movies...'
   Movie.create!(title: Faker::Movie.title, overview: Faker::Quote.yoda, poster_url: 'https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg', rating: rand(0.0..10.0).round(1))
 end
 puts 'Finished!'
+
+puts 'Cleaning database...'
+List.destroy_all
+puts 'Creating lists...'
+List.create(name: 'Love')
+List.create(name: 'Queer')
+List.create(name: 'Society')
+List.create(name: 'Horror 2000')
+List.create(name: 'Weird')
+puts 'Finished!'
