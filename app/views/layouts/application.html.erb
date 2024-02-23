@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>RailsWatchList</title>
-    <link rel="icon" type="image/png" href="app/assets/images/watch_list_icon.png"/>
+    <%# <link rel="icon" type="image/png" href="app/assets/images/watch_list_icon.png"/> %>
+    <%= favicon_link_tag asset_path('watch_list_icon.png') %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
